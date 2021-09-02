@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-sprinkler Register</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" > 
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <h1>SIGN UP</h1>
+</head>
+<body>
+  <form method="POST" action="/register">
+    <label>USER NAME</label> </br>
+    <input type="text" id="username" name="username" placeholder="ENTER USERNAME" required> <p>
+    <label>EMAIL</label> </br>
+    <input type="text" id="email" name="email" placeholder="ENTER EMAIL ADDRESS"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email format" required> <p>
+    <label>PASSWORD</label> </br>
+    <input type="text" id="password" name="password"
+    pattern=".{8}" title="6 or more characters" placeholder="ENTER PASSWORD" required> <P>
+    <label>CONFIRMATION PASSWORD</label> </br>
+    <input type="text" id="passCheck" name="passCheck"
+    placeholder="ENTER CONFIRMATION PASSWORD" size="30" required> <P>
+    <input type="submit" value="SIGN UP" > <P>
+
+  </form>
+
+</body>
+</html>

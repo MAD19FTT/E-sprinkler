@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-sprinkler Login</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" > 
+  <link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename='js/main.js') }}" >
+  <nonscript><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nonscript.css') }}"></nonscript>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+      {% for message in messages %}
+          <div class="alert alert-danger alert-dismissible fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <p>{{message}}</p>
+          </div>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+<h1>Login</h1>
+<img src="../static/images/e-sprinkler logo.png" class="logo" alt="Logo">
+</head>
+<body>
+  <div class="stamp">
+  <form method="POST" action="/">
+    <input type="text" name="username" placeholder="USERNAME" required> <p>
+    <input type="text" name="password" placeholder="PASSWORD" required> <P>
+    <input type="checkbox" onclick="myFunction()">Show Password <p>
+    <input type="submit"name="press" value="LOG IN" > <P>
+    <a href="/forget">Forget your password?</a> <p>
+    Not a member yet?
+    <a href="/register" > SIGN UP now</a> <p>
+    <input type="button" name="press" value="SIGN UP" ">
+  </form>
+  </div>
+  <button type="button" onclick="myFunction()">Show Password </button> <p></p>
+
+</body>
+</html>
