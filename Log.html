@@ -26,8 +26,12 @@
   <div class="stamp">
   <form method="POST" action="/">
     <input type="text" name="username" placeholder="USERNAME" required> <p>
-    <input type="text" name="password" placeholder="PASSWORD" required> <P>
+   <input type="password" name="password"  type="password" placeholder="PASSWORD" id="myInput" required> <P>
     <input type="checkbox" onclick="myFunction()">Show Password <p>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round" onclick="myFunction()"></span>
+    </label><p>
     <input type="submit"name="press" value="LOG IN" > <P>
     <a href="/forget">Forget your password?</a> <p>
     Not a member yet?
@@ -35,7 +39,17 @@
     <input type="button" name="press" value="SIGN UP" ">
   </form>
   </div>
-  <button type="button" onclick="myFunction()">Show Password </button> <p></p>
 
+  <script rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename='js/main.js') }}" ></script>
+  <script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 </body>
 </html>
