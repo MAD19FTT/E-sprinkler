@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-sprinkler Register</title>
+  <link href="main.css" rel="stylesheet" />
+  <h1>SIGN UP</h1>
+</head>
+<body>
+  <form action="" method="">
+    <label>USER NAME</label> </br>
+    <input type="text" id="username" name="username" placeholder="ENTER USERNAME" required> <p>
+    <label>EMAIL</label> </br>
+    <input type="text" id="email" name="email" placeholder="ENTER EMAIL ADDRESS"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email format" required> <p>
+    <label>PASSWORD</label> </br>
+    <input type="text" id="password" name="password"
+    pattern=".{8}" title="6 or more characters" placeholder="ENTER PASSWORD" required> <P>
+    <label>CONFIRMATION PASSWORD</label> </br>
+    <input type="text" id="passCheck" name="passCheck"
+    placeholder="ENTER CONFIRMATION PASSWORD" size="30" required> <P>
+
+      <input type="checkbox" class="button" id="btn-check" >
+    <label  for="btn-check">M</label>
+    <input type="checkbox" class="button" id="btn-chec" >
+    <label  for="btn-chec">T</label>
+
+
+    <input type="submit" value="SIGN UP" > <P>
+
+  </form>
+
+</body>
+</html>
