@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+        <div class="stamp">
+            <form method="post" action="/trial">
+
+                <label>Enter Location name :</label>
+                <input type="text" placeholder="NAME" name="name" required> <p>
+        
+                <label>Latitude:</label>
+                <input type="text" placeholder="LATITUDE" name="latitude" required> <P>
+        
+                <label>Longitude:</label>
+                <input type="text" placeholder="LONGITUDE" name="longitude" required> <P>
+        
+                <input type="submit" value="ENTER" > <P>
+            </form>
+            <style>
+                button {
+                    height: 50px!important;
+                    width: auto;
+                    border-radius: 120px!important;
+                    background-color: white!important;
+                    border: 2px solid #A0E7E5!important;
+                    transition: background-color 2s!important;
+                    margin-top: 5%!important;
+                    
+                }
+                button:hover {
+                    background-color: #FBE7C6!important;
+                }
+            </style>
+            <a href="/map">
+                <div style="text-align: center;">
+                   <button type="button">View Map</button>
+                </div>
+            </a>
+        </div>
+    {% endblock content %}
+</body>
+</html>

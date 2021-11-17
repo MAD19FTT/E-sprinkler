@@ -1,0 +1,15 @@
+{% extends "front.html" %}
+{% block title %}OTP Authenticate{% endblock %}
+
+{% block content %}
+
+    <h1>OTP AUTHENTICATION</h1>
+</head>
+<body>
+    <!--<h2>ENTER YOUR EMAIL ADDRESS AND WE'LL SEND YOU A LINK TO RESET YOUR PASSWORD</h2>-->
+
+  <form method="POST" action="/authorize">
+    <input type="text" name="codex" placeholder="otp code" required> <p></p>
+    <button type="submit" >SUBMIT</button>
+  </form>
+{% endblock content %}

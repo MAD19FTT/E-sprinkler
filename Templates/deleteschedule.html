@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Delete Schedule{% endblock %}
+
+{% block content %}
+    <h1>SCHEDULE</h1>
+    <h3>SCHEDULE LIST</h3>
+    <form method="POST" action="/delete">
+        <h2>{{name[0]}}</h2><p></p>
+        <div id="check">
+        {%for row in active%}
+            {% set row = active[loop.index-1] %}
+            {% set weekday = day[loop.index-1] %}
+            <input type="checkbox" id="{{row[2]}}" name="schedule" value="{{row[0]}}" class="check">
+            <label class="button" for="{{row[2]}}" >  {{row[1]}}</br> {{row[2]}} </br> {{weekday}} </label> </br>
+        {% else %}
+            There is no schedule added
+        {% endfor %}
+        </div>
+        <input type="submit" name="delete" value="DELETE" "> </br>
+    </form>
+
+    <a class="button" id="cancel" href="/schedule" > CANCEL</a> <p></p>
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %} 
+<!DOCTYPE HTML>
+{% block content %}
+<html>
+	
+	<head>
+		<title>E-Sprinkler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1> Welcome to the home of E-Sprinkler </h1>
+								<p>Here is some options for you to check on your sprinkler system. </p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{{ url_for('static', filename='Images/gps-tracker.png')}}" width="200" height="500" />
+									</span>
+									<a href="location.html">
+										<h2>Location</h2>
+										<div class="content">
+											<p>This will show your sprinkler location in the map .</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{{ url_for('static', filename='Images/timer.png')}}" width="200" height="500" />
+									</span>
+									<a href="/select">
+										<h2>Schedule</h2>
+										<div class="content">
+											<p>This will show your sprinkler Schedule.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{{ url_for('static', filename='Images/activity log.png')}}" width="200" height="500" />
+									</span>
+									<a href="LINK HERE ">
+										<h2>Activity Log</h2>
+										<div class="content">
+											<p>This will show your sprinkler Activity log.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{{ url_for('static', filename='Images/sensor.png')}}"  width="200" height="500" />
+									</span>
+									<a href="sensor.html">
+										<h2>Sensor</h2>
+										<div class="content">
+											<p>This will show your sprinkler Sensor log.</p>
+										</div>
+									</a>
+								</article>
+							
+							</section>
+						</div>
+					</div>
+
+					<br>
+					
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Need help? Contact Us</h2>
+								<form method="post" action="/">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<ul class="copyright">
+								<li>&copy; E-Sprinkler. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		
+	</body>
+</html>
+{% endblock %}

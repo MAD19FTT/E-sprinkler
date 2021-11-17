@@ -1,0 +1,97 @@
+{% extends 'base.html' %} 
+<!DOCTYPE HTML>
+{% block content %}
+<html>
+	<head>
+		<title>E-Sprinkler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				
+				<!-- Main -->
+                <div id="main">
+                    <div class="inner">
+                        <header>
+                            <h1>SENSOR DETAIL</h1>
+                            <p></p>
+
+                            <label for="sprinkler-location">Choose a sprinkler location:</label>
+                                    <select name="sprinkler-location" id="sprinkler-location">
+                                        <option value="1">Front</option>
+                                      <option value="2">Back</option>
+                                      <option value="3">Left</option>
+                                      <option value="4">Right</option>
+                                    </select> <br>
+
+                        </header>
+                        <section class="tiles">
+                            <article class="style1">
+                                <span class="image">
+                                    <img src="{{ url_for('static', filename='Images/temp.png')}}" width="200" height="500" />
+                                </span>
+                                <a href="/temp">
+                                    <h2>Temperature</h2>
+                                    <div class="content">
+                                        <p>Current temperature on the surrounding area</p>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <article class="style2">
+                                <span class="image">
+                                    <img src="{{ url_for('static', filename='Images/waterDrop.png')}}" width="200" height="500" />
+                                </span>
+                                <a href="/moisture">
+                                    <h2>Moisture</h2>
+                                    <div class="content">
+                                        <p>Current moisture available in the atmosphere</p>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+
+        </div>
+
+        
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Need help? Contact Us</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<ul class="copyright">
+								<li>&copy; E-Sprinkler. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		
+	</body>
+</html>
+{% endblock %}

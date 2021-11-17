@@ -1,0 +1,88 @@
+{% extends 'base.html' %} 
+<!DOCTYPE HTML>
+{% block content %}
+<html>
+	<head>
+		<title>E-Sprinkler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				
+				<!-- Main -->
+                <div id="main">
+                    <div class="inner">
+                        <header>
+                            <h1>SENSOR</h1>
+                            <p></p>
+                        </header>
+                        <section class="tiles">
+                            <article class="style6">
+                                <span class="image">
+                                    <img src="{{ url_for('static', filename='Images/WaterTank.png')}}" width="200" height="500" />
+                                </span>
+                                <a href="/waterlevel">
+                                    <h2>water level</h2>
+                                    <div class="content">
+                                        <p>Amount of water currently available in the tank</p>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <article class="style4">
+                                <span class="image">
+                                    <img src="{{ url_for('static', filename='Images/setting.png')}}" width="200" height="500" />
+                                </span>
+                                <a href="/sensorlocation">
+                                    <h2>sensor detail</h2>
+                                    <div class="content">
+                                        <p>Details of the location and other sensor</p>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </section>
+                    </div>
+                </div>
+
+        </div>
+
+		<br>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Need help? Contact Us</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<ul class="copyright">
+								<li>&copy; E-Sprinkler. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		
+	</body>
+</html>
+{% endblock %}

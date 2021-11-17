@@ -1,0 +1,22 @@
+{% extends "front.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+  <h1>REGRISTRATION</h1>
+  <form method="POST" action="/register">
+    <label>USER NAME</label> </br>
+    <input type="text" id="username" name="username" placeholder="ENTER USERNAME" required> <p></p>
+    <label>EMAIL</label> </br>
+    <input type="text" id="email" name="email" placeholder="ENTER EMAIL ADDRESS"
+    pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email format" required> <p></p>
+    <label>PASSWORD</label> </br>
+    <input type="password" id="password" name="password"
+    pattern=".{6,}" title="6 or more characters" placeholder="ENTER PASSWORD" required> <P></P>
+    <label>CONFIRMATION PASSWORD</label> </br>
+    <input type="password" name="password2"
+    placeholder="ENTER CONFIRMATION PASSWORD" size="30" required> <P></P>
+    <input type="submit" value="SIGN UP" >
+
+  </form>
+
+{% endblock content %}

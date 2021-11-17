@@ -1,0 +1,16 @@
+{% extends "front.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+    <h1>FORGOT PASSWORD</h1>
+    <!--<img src="../static/images/e-sprinkler logo.png" class="icon" >-->
+</head>
+<body>
+    <!--<h2>ENTER YOUR EMAIL ADDRESS AND WE'LL SEND YOU A LINK TO RESET YOUR PASSWORD</h2>-->
+
+  <form method="POST" action="/forget">
+    <input type="text" name="email" placeholder="EMAIL ADDRESS" required> <p></p>
+    <button type="submit" >SUBMIT</button>
+  </form>
+{% endblock content %}

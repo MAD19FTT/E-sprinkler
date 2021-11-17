@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Change Schedule{% endblock %}
+
+{% block content %}
+   
+    <h3>ZONE</h3><p></p>
+    <h2><label type="text" name="location" value="{{location[0]}}"> {{location[0]}}</label></h2> <p></p>
+
+    <form method="POST" action="/adjust">
+        <label>DATE</label></br>
+
+        <div id="select2" >
+            <input type="date" name="date" value="{{date[0]}}"> <p></p> 
+        </div>
+        
+            <label>DAY</label><br>
+        <div id="check">
+        <input type="checkbox" id="mon" name="day_pick" value="0"  onchange="hide()" {{days[0]}}>
+        <label for="mon" class="button" id="days">Mon</label>
+        <input type="checkbox" id="tue" name="day_pick" value="1"  onchange="hide()" {{days[1]}}>
+        <label for="tue" class="button" id="days">Tue</label>
+        <input type="checkbox" id="wed" name="day_pick" value="2"  onchange="hide()" {{days[2]}}>
+        <label for="wed" class="button" id="days">Wed</label> 
+        <input type="checkbox" id="thu" name="day_pick" value="3"  onchange="hide()" {{days[3]}}>
+        <label for="thu" class="button" id="days">Thu</label> 
+        <input type="checkbox" id="fri" name="day_pick" value="4"  onchange="hide()" {{days[4]}}>
+        <label for="fri" class="button" id="days">Fri</label>
+        <input type="checkbox" id="sat" name="day_pick" value="5"  onchange="hide()" {{days[5]}}> 
+        <label for="sat" class="button" id="days">Sat</label> 
+        <input type="checkbox" id="sun" name="day_pick" value="6"  onchange="hide()" {{days[6]}}>
+        <label for="sun" class="button" id="days">Sun</label> <p></p>
+        </div>
+
+        <label> SET TIME</label> </br>
+        <input type="time" name="time" value="{{time[0]}}"> <p></p> 
+        <input type="submit" name="save" value="SAVE" >
+    </form>
+{% endblock content %}

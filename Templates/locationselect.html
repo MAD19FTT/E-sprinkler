@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Water Schedule{% endblock %}
+
+{% block content %}
+    <h1>SCHEDULE</h1>
+    <h3>SCHEDULE LIST</h3>
+    <form method="POST" action="/select">
+      <select name="gps"> 
+      {% for name in location %}
+          <option value="{{name[0]}}">{{name[0]}}</option>
+      {% endfor %}
+      
+      </select> <p></p>
+
+      <input type="submit" name="next" value="Submit" ">
+    </form>
+{% endblock content %}

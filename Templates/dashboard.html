@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"/>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+{% block content %}
+    <div class="dashboard">
+        <div class="page-wrapper">
+            <!-- Slider -->
+            <div class="post-slider">
+                <h1 class="slider-title">My Dashboard</h1>
+                <!-- <i class="fa fa-chevron-left prev"></i>
+                <i class="fa fa-chevron-right next"></i> -->
+
+                <div class="post-wrapper">
+                    <!-- 1st item -->
+                    <div class="post">
+                        <img src="{{ url_for('static', filename='Images/soilmoistureicon(blue).png')}}" alt="" class="slider-image">
+                        <span>{{ soil }}</span>
+                        <div class="details">
+                            <h4><a href="">Soil Moisture</a></h4>
+                            <p>Moisture present in the soil</p>
+                            &nbsp; 
+                            <!-- <i class="fa fa-calendar">Aug 31, 2019</i> -->
+                        </div>
+                    </div>
+
+                    <!-- 2nd item -->
+                    <div class="post">
+                        <img src="{{ url_for('static', filename='Images/temperature(blue).png')}}" alt="" class="slider-image">
+                        <span>{{ temp }} °C</span>
+                        <div class="details">
+                            <h4><a href="">Temperature</a></h4>
+                            <p>Temperature around the sprinkler</p>
+                            &nbsp;
+                            <!-- <i class="fa fa-calendar">Aug 31, 2019</i> -->
+                        </div>
+                    </div>
+
+                <!-- 3rd item -->
+                <div class="post">
+                        <img src="{{ url_for('static', filename='Images/water tank(blue).png')}}" alt="" class="slider-image">
+                        <span>55%</span>
+                        <div class="details">
+                            <h4><a href="">Water Level</a></h4>
+                            <p>Current Water Level </p>
+                            &nbsp;
+                            <!-- <i class="fa fa-calendar">Aug 31, 2019</i> -->
+                        </div>
+                    </div>
+
+                    <!-- 4th item -->
+                    <div class="post">
+                        <img src="{{ url_for('static', filename='Images/Connectivity(blue).png')}}" alt="" class="slider-image">
+                        <div class="details">
+                            <h4><a href="">Connectivity</a></h4>
+                            <p>Status Connnectivity: Online</p>
+                            &nbsp;
+                            <!-- <i class="fa fa-calendar">Aug 31, 2019</i> -->
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Moisture Map -->
+            <!-- <div class="moisture-map">
+                <h1 class="map-header">Moisture Map</h1>
+                <div id="map"></div>
+            </div>    -->
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+        <!-- Custom Javascript -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/slick.js')}}" defer></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/map.js')}}"></script>
+    </div>
+
+    <br> 
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <h2>Need help? Contact Us</h2>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <input type="text" name="name" id="name" placeholder="Name" />
+                        </div>
+                        <div class="field half">
+                            <input type="email" name="email" id="email" placeholder="Email" />
+                        </div>
+                        <div class="field">
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send" class="primary" /></li>
+                    </ul>
+                </form>
+            </section>
+            <ul class="copyright">
+                <li>&copy; E-Sprinkler. All rights reserved</li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+{% endblock content%}
+</html>

@@ -1,0 +1,31 @@
+{% extends "front.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <h1>LOGIN</h1>
+  <div class="stamp">
+
+  <form method="POST" action="/login" >
+    <input type="text" name="username" placeholder="USERNAME" id="size" required> <p>
+    <input type="password" name="password" placeholder="PASSWORD"  id="password" required> <P>
+    <input type="checkbox" onclick="hidePass()">Show Password <p>
+    <input type="submit" name="press" value="LOG IN" > <P>
+    <a href="/forget">Forget your password?</a> <p>
+    Not a member yet?
+    <a href="/register" > SIGN UP now</a> <p>
+  </form>
+  </div>
+
+
+  <script>
+  function hidePass() {
+			var pass = document.getElementById("password");
+			if (pass.type === "password") {
+			  pass.type = "text";
+			} else {
+			  pass.type = "password";
+			}
+		  }
+  </script>
+
+{% endblock content %}
